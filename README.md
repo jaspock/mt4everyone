@@ -22,3 +22,5 @@ The course is organized in 9 units:
 9. Machine translation for language learners.
 
 All these materials are outcomes of the EU Erasmus+ project "[MultiTraiNMT](https://multitrainmt.eu/): machine translation training for multilingual citizens" (2019&ndash;2022).
+
+![](./assets/logo-multitrainmt.png) ![](./assets/logo-erasmusplus.png)
