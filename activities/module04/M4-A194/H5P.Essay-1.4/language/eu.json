@@ -1,0 +1,287 @@
+{
+  "semantics": [
+    {
+      "label": "Multimedia",
+      "fields": [
+        {
+          "label": "Mota",
+          "description": "Galderaren gainean erakusteko aukerazko multimedia."
+        },
+        {
+          "label": "Desgaitu irudien zooma"
+        }
+      ]
+    },
+    {
+      "label": "Lanaren deskribapena",
+      "description": "Deskribatu ezazu hemen zure lana. Lanaren deskribapena idazteko testu-eremuaren gainean agertuko da.",
+      "placeholder": "Laburtu ezazu liburua 500 karaktereetan..."
+    },
+    {
+      "label": "Laguntza-testua",
+      "description": "Testu honek erabiltzaileari hasten lagundu beharko lioke.",
+      "placeholder": "Liburu hau honi buruz da..."
+    },
+    {
+      "label": "Adibidezko emaitza",
+      "description": "Nahi baduzu emaitzaren adibide bat gehitu dezakezu ikasleak testua sortu ondoren erakusteko. Adibidezko emaitza deitzen zaio emaitza zuzen bat baino gehiago egon daitekeelako",
+      "fields": [
+        {
+          "label": "Sarrera",
+          "description": "Zure adibidearen inguruko ikasleentzako azalpena gehitu dezakezu. Azalpena soilik erakutsiko da adibide bat ere gehitzen baduzu.",
+          "placeholder": "Gogoratu ezazu mesedez ez duzula zertan emaitza berbera derrigorrez eman behar. Adibide on bat baino ez da."
+        },
+        {
+          "label": "Emaitza-adibidearen testua",
+          "description": "Ikasleak bidalketa egin ondoren \"Erakutsi emaitza\" botoia ikusiko du hemen testu bat idazten baduzu."
+        }
+      ]
+    },
+    {
+      "label": "Hitz-gakoak",
+      "widgets": [
+        {
+          "label": "Lehenetsitakoa"
+        }
+      ],
+      "entity": "Hitz-gakoa",
+      "field": {
+        "label": "Hitz-gakoa",
+        "fields": [
+          {
+            "label": "Hitz-gakoa",
+            "description": "Keyword or phrase to look for. Use an asterisk '*' as a wildcard for one or more characters. Use a slash '/' at the beginning and the end to use a regular expression."
+          },
+          {
+            "label": "Aldakuntzak",
+            "description": "Add optional variations for this keyword. Example: For a 'city' add alternatives 'town', 'municipality' etc. Points will be awarded if the user includes any of the specified alternatives.",
+            "entity": "aldakuntza",
+            "field": {
+              "label": "Aldakuntzaren hitz-gakoa"
+            }
+          },
+          {
+            "label": "Puntuak, Aukerak eta Feedbacka",
+            "fields": [
+              {
+                "label": "Puntuak",
+                "description": "Points that the user will get if he/she includes this keyword or its alternatives in the answer."
+              },
+              {
+                "label": "Gertakariak",
+                "description": "Hitz-gakoa edo bere aldakuntzei puntuatu beharko diren gertakari kopurua definitzen du."
+              },
+              {
+                "label": "Case sensitive",
+                "description": "Erabiltzaileak idatzitakoa erantzunaren berdin-berdina dela ziurtatzen du."
+              },
+              {
+                "label": "Barkatu akats txikiak",
+                "description": "Honek letreiatze-akats txikiak onartuko ditu (3-9 karakteretan: akats 1, 9 karaktere baino gehiagotan: 2 akats)."
+              },
+              {
+                "label": "Feedbacka hitz-gakoa badago",
+                "description": "This feedback will be displayed if the user includes this keyword or its alternatives in the answer."
+              },
+              {
+                "label": "Feedback if keyword missing",
+                "description": "This feedback will be displayed if the user doesn’t include this keyword or its alternatives in the answer."
+              },
+              {
+                "label": "Feedback word shown if keyword included",
+                "description": "This option allows you to specify which word should be shown in front of your feedback if a keyword was found in the text.",
+                "options": [
+                  {
+                    "label": "hitz-gakoa"
+                  },
+                  {
+                    "label": "alternatiba aurkitu da"
+                  },
+                  {
+                    "label": "emandako erantzuna"
+                  },
+                  {
+                    "label": "bat ere ez"
+                  }
+                ]
+              },
+              {
+                "label": "Feedback word shown if keyword missing",
+                "description": "This option allows you to specify which word should be shown in front of your feedback if a keyword was not found in the text.",
+                "options": [
+                  {
+                    "label": "hitz-gakoa"
+                  },
+                  {
+                    "label": "bat ere ez"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Feedback Orokorra",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Lehenetsitakoa"
+            }
+          ],
+          "label": "Zehaztu ezazu edozein puntuazio-tarterako feedback pertsonalizatua",
+          "description": "Egin klik \"Gehitu tartea\" botoian behar dituzun tarte guztiak gehitzeko. Adibidez: 0-20% Puntuazio eskasa, 21-91% Batez besteko puntuazioa, 91-100% Puntuazio bikaina!",
+          "entity": "tartea",
+          "field": {
+            "fields": [
+              {
+                "label": "Puntuazio-tartea"
+              },
+              {},
+              {
+                "label": "Zehaztutako tartearentzako feedbacka",
+                "placeholder": "Idatzi ezazu feedbacka"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Portaeraren ezarpenak",
+      "description": "Aukera hauek lanaren portaera kontrolatzea ahalbidetzen dizute.",
+      "fields": [
+        {
+          "label": "Minimum number of characters",
+          "description": "Specify the minimum number of characters that the user must enter."
+        },
+        {
+          "label": "Maximum number of characters",
+          "description": "Specify the maximum number of characters that the user can enter."
+        },
+        {
+          "label": "Input field size",
+          "description": "The size of the input field in amount of lines it will cover",
+          "options": [
+            {
+              "label": "lerro 1"
+            },
+            {
+              "label": "3 lerro"
+            },
+            {
+              "label": "10 lerro"
+            }
+          ]
+        },
+        {
+          "label": "Gaitu \"Saiatu berriro\"",
+          "description": "Markatuz gero, ikasleek lana berriz egiten saiatu ahalko dira."
+        },
+        {
+          "label": "Ignore scoring",
+          "description": "If checked, learners will only see the feedback that you provided for the keywords, but no score."
+        },
+        {
+          "label": "Points in host environment",
+          "description": "Used to award points in host environment merely for answering (not shown to learner)."
+        },
+        {
+          "label": "Gainditzeko ehunekoa",
+          "description": "Percentage that's necessary for passing"
+        },
+        {
+          "label": "Mastering percentage",
+          "description": "Percentage that's necessary for mastering. Setting the mastering percentage below 100 % will lower the maximum possible score accordingly. It's intended to give some leeway to students, not to \"graciously accept\" solutions that do not contain all keywords."
+        },
+        {
+          "label": "Override case sensitive",
+          "description": "This option determines if the \"Case sensitive\" option will be activated for all keywords.",
+          "options": [
+            {
+              "label": "Gaituta"
+            },
+            {
+              "label": "Desgaituta"
+            }
+          ]
+        },
+        {
+          "label": "Baliogabetu akatsak barkatzea",
+          "description": "This option determines if the \"Forgive mistakes\" option will be activated for all keywords.",
+          "options": [
+            {
+              "label": "Gaituta"
+            },
+            {
+              "label": "Desgaituta"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "\"Egiaztatu\" botoiarentzako testua",
+      "default": "Egiaztatu"
+    },
+    {
+      "label": "\"Bidali\" botoiaren testua",
+      "default": "Bidali"
+    },
+    {
+      "label": "\"Saiatu berriro\" botoiarentzako testua",
+      "default": "Saiatu berriro"
+    },
+    {
+      "label": "\"Erakutsi emaitza\" botoiaren testua",
+      "default": "Erakutsi emaitza"
+    },
+    {
+      "label": "Header for panel containing feedback for included/missing keywords",
+      "default": "Feedbacka"
+    },
+    {
+      "label": "Label for solution",
+      "default": "Sample solution"
+    },
+    {
+      "label": "Remaining characters",
+      "default": "Remaining characters: @chars",
+      "description": "Message for remaining characters. You can use @chars which will be replaced by the corresponding number."
+    },
+    {
+      "label": "Not enough characters",
+      "default": "You must enter at least @chars characters!",
+      "description": "Message to indicate that the text doesn't contain enough characters. You can use @chars which will be replaced by the corresponding number."
+    },
+    {
+      "label": "Gorde mezua",
+      "description": "Message indicating that the text has been saved",
+      "default": "gordeta"
+    },
+    {
+      "label": "Your result (not displayed)",
+      "description": "Accessibility text used for readspeakers. @score will be replaced by the number of points. @total will be replaced by the maximum possible points.",
+      "default": "@total puntutatik @score puntu lortu duzu"
+    },
+    {
+      "label": "Navigation message (not displayed)",
+      "description": "Accessibility text used for readspeakers",
+      "default": "Navigated to newly included sample solution after textarea."
+    },
+    {
+      "label": "\"Egiaztatu\" botoiaren laguntza-teknologientzako etiketa",
+      "default": "Egiaztatu erantzunak."
+    },
+    {
+      "label": "\"Erakutsi emaitza\" botoiaren laguntza-teknologientzako etiketa",
+      "default": "Erakutsi emaitza. Adibiderako erantzun bat emango zaizu."
+    },
+    {
+      "label": "\"Saiatu berriro\" botoiaren laguntza-teknologientzako etiketa",
+      "default": "Retry the task. You can improve your previous answer if the author allowed that."
+    }
+  ]
+}
