@@ -98,9 +98,27 @@ async function populateModules() {
   for(const m of data.modules) {
     list.innerHTML += `<option value=${m}>${data[m].title}</option>`;
   }
-  module = data.modules[0];
-  activities = data[module].activities;
-  activity = -1;
+  if (window.location.search.startsWith("?q=") && window.location.search.length >= 8) {
+    var query = window.location.search.substr(3);
+    var mod = parseInt(query[1]);
+    var act = query;
+    if (mod >= 1 && mod <= 9) {
+      module = data.modules[mod-1];
+      activities = data[module].activities;
+      activity = activities.indexOf(act) != -1 ? activities.indexOf(act) - 1 : -1;  // indexOf returns -1 if activity not found
+      document.getElementById("modules").selectedIndex = mod-1;
+    }
+    else {
+      module = data.modules[0];
+      activities = data[module].activities;
+      activity = -1;
+    }
+  }
+  else {
+    module = data.modules[0];
+    activities = data[module].activities;
+    activity = -1;
+  }
   await showActivity();
 }
 
@@ -114,8 +132,14 @@ async function showActivity (event) {
   else {
     activity= (activity === 0) ? activities.length-1 : activity-1;
   }
+  console.log(activity);
   const h5p = document.getElementById('h5p-container');
-  const title = document.getElementById('title');  
+  const title = document.getElementById('title');
+  const newurl = window.location.protocol + "//" + window.location.host 
+                + ("/" + window.location.pathname ? window.location.pathname : "") 
+                + `?q=${activities[activity]}`;
+  window.history.replaceState(activities[activity], activities[activity], newurl);
+  document.title = activities[activity]
   h5p.innerHTML= '';
   options.h5pJsonPath = `./activities/${module}/${activities[activity]}`;
   options.downloadUrl = `./activities/${module}/${activities[activity]}.h5p`;
